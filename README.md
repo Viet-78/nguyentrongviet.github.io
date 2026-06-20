@@ -1,31 +1,39 @@
-# nguyentrongviet.github.io
+# Nguyễn Trọng Việt — Portfolio
 
-Portfolio cá nhân — static site deploy trên GitHub Pages.
-
-## Cấu trúc thư mục
-
-```
-nguyentrongviet.github.io/
-├── index.html      # Trang chính
-├── css/style.css   # Giao diện theo Figma
-├── js/main.js      # Menu mobile, scroll
-├── assets/         # Ảnh, icon
-└── README.md
-```
+Website portfolio cá nhân (React + Vite + Tailwind), deploy tự động lên GitHub Pages.
 
 ## Chạy local
 
-Mở file `index.html` trong trình duyệt, hoặc:
-
 ```bash
-cd nguyentrongviet.github.io
-python3 -m http.server 8080
+npm install
+npm run dev
 ```
 
-Truy cập: http://localhost:8080
+Mở http://localhost:5173
 
-## Deploy lên GitHub Pages
+## Build production
 
-Repo hiện tại: https://github.com/Viet-78/nguyentrongviet.github.io
+```bash
+npm run build
+npm run preview
+```
 
-Website live: https://viet-78.github.io/nguyentrongviet.github.io/
+## Deploy
+
+Push lên nhánh `portfolio/v1.0.0` → GitHub Actions tự build và deploy.
+
+**Live site:** https://viet-78.github.io/nguyentrongviet.github.io/
+
+### Cấu hình GitHub Pages (chỉ làm 1 lần)
+
+1. Repo → **Settings** → **Pages**
+2. **Source:** GitHub Actions (không phải Deploy from branch)
+
+## Tùy chỉnh nội dung
+
+| File | Nội dung |
+|------|----------|
+| `src/app/components/Hero.tsx` | Tên, mô tả, ảnh hero |
+| `src/app/components/About.tsx` | Giới thiệu bản thân |
+| `src/app/components/Portfolio.tsx` | Dự án |
+| `src/app/components/Contact.tsx` | Email, WhatsApp, social links |
