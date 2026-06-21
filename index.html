@@ -1,26 +1,411 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang web của tôi</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: #f4f4f9;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyễn Trọng Việt | Portfolio</title>
+  <meta name="description" content="Nguyễn Trọng Việt — Video Editor, Filmmaker, Motion Designer portfolio." />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <h1>Chào mừng bạn đến với Website của tôi! 🎉</h1>
-    <p>Trang web này được tạo và lưu trữ miễn phí trên GitHub Pages.</p>
+  <div class="app">
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true">
+      <div class="cursor-glow-blob" id="cursor-glow-blob"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">Nguyễn Trọng Việt</a>
+        <div class="nav-links">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#youtube" class="nav-link">YouTube</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+        <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="icon icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-inner">
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#skills">Skills</a>
+          <a href="#youtube">YouTube</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact" class="nav-cta">Hire Me</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-blob hero-blob--blue"></div>
+        <div class="hero-blob hero-blob--red"></div>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-text reveal">
+            <span class="badge">Available for hire</span>
+            <h1 class="hero-title">Nguyễn Trọng Việt</h1>
+            <div class="hero-roles">
+              <span>Video Editor</span>
+              <span class="dot">•</span>
+              <span>Filmmaker</span>
+              <span class="dot">•</span>
+              <span>Motion Designer</span>
+              <span class="dot">•</span>
+              <span>Storyteller</span>
+            </div>
+            <p class="hero-tagline">Designing motion with clarity and emotion. Visual storytelling through precision and rhythm.</p>
+          </div>
+          <div class="hero-actions reveal">
+            <a href="#portfolio" class="btn-primary">
+              <span>
+                View Portfolio
+                <svg class="icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              </span>
+              <span class="btn-shine" aria-hidden="true"></span>
+            </a>
+            <a href="#contact" class="btn-secondary">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-image-wrap reveal">
+          <img src="https://images.unsplash.com/photo-1757746928843-680d486ecf15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBmaWxtbWFrZXIlMjBwb3J0cmFpdCUyMGRhcmt8ZW58MXx8fHwxNzY4OTkyNDc4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Professional Portrait" />
+          <div class="hero-image-overlay"></div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-indicator-inner">
+          <div class="scroll-indicator-dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section--secondary">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">Who I Am</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-desc">I invoke emotions through storytelling and editing.</p>
+        </div>
+        <div class="reveal" style="max-width: 48rem; margin: 0 auto;">
+          <div class="glass-card about-card">
+            <h3>Visual Storyteller &amp; Creative Person</h3>
+            <p>Tôi là Nguyễn Trọng Việt — video editor, motion designer và filmmaker đam mê kể chuyện bằng hình ảnh. Tôi thích những dự án kết hợp hình ảnh mạnh với cảm xúc, nhịp điệu và storytelling. Hành trình của tôi bắt đầu từ những edit đơn giản, và dần phát triển kỹ năng về cinematic editing, typography-based videos, documentary-style storytelling và color grading. Tôi tin rằng editing tốt không chỉ là cắt ghép và hiệu ứng — mà là timing, mood và sự chân thật.</p>
+            <p>I believe that Every frame is carefully crafted to tell a story that resonates with clarity and impact.</p>
+            <p>From commercial brand films to personal documentaries, I bring a cinematic eye and meticulous attention to detail to every project. My goal is to create visuals that don't just look beautiful, but feel meaningful.</p>
+            <div class="tools-section">
+              <div class="tools-label">Primary Tools</div>
+              <div class="tools-list">
+                <span class="tool-tag">Adobe Premiere Pro</span>
+                <span class="tool-tag">DaVinci Resolve</span>
+                <span class="tool-tag">After Effects</span>
+                <span class="tool-tag">Adobe Photoshop</span>
+              </div>
+            </div>
+            <a href="https://www.youtube.com/@pradeepmov" target="_blank" rel="noopener noreferrer" class="youtube-link">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+              <span>Visit My YouTube Channel</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section section--dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">My Work</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">A collection of cinematic stories, crafted with precision and passion</p>
+        </div>
+        <div class="projects-grid">
+          <article class="glass-card glass-card--hover project-card reveal" data-video-url="https://www.instagram.com/reel/DTFABc8Efv5/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1758592670606-096a0fc94aed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwcHJvZHVjdGlvbiUyMGNpbmVtYXxlbnwxfHx8fDE3Njg5NDc4ODF8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Cinematic short" />
+              <div class="project-overlay">
+                <button class="play-btn" aria-label="Play video">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Travel short</div>
+              <h3 class="project-title">Cinematic short</h3>
+              <div class="project-underline"></div>
+            </div>
+          </article>
+
+          <article class="glass-card glass-card--hover project-card reveal reveal-delay-1" data-video-url="https://www.instagram.com/reel/DTk20gdDbBO/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1740139282794-1155aee6f7ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Typography edit" />
+              <div class="project-overlay">
+                <button class="play-btn" aria-label="Play video">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Typography</div>
+              <h3 class="project-title">Typography edit</h3>
+              <div class="project-underline"></div>
+            </div>
+          </article>
+
+          <article class="glass-card glass-card--hover project-card reveal reveal-delay-2" data-video-url="https://www.instagram.com/reel/DSJ0liOiVLj/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1671902715190-b3f42d5228e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Talking head" />
+              <div class="project-overlay">
+                <button class="play-btn" aria-label="Play video">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Overall</div>
+              <h3 class="project-title">Talking head</h3>
+              <div class="project-underline"></div>
+            </div>
+          </article>
+
+          <article class="glass-card glass-card--hover project-card reveal" data-video-url="https://www.instagram.com/reel/DRL71Gziewq/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1695408248582-0c122bf0f9e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Documentary Edit" />
+              <div class="project-overlay">
+                <button class="play-btn" aria-label="Play video">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Film</div>
+              <h3 class="project-title">Documentary Edit</h3>
+              <div class="project-underline"></div>
+            </div>
+          </article>
+
+          <article class="glass-card glass-card--hover project-card reveal reveal-delay-1" data-video-url="https://www.instagram.com/reel/DSo3Irmic8u/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1758553026412-bc1da0ebd366?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Insta edits" />
+              <div class="project-overlay">
+                <button class="play-btn" aria-label="Play video">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Variation</div>
+              <h3 class="project-title">Insta edits</h3>
+              <div class="project-underline"></div>
+            </div>
+          </article>
+
+          <article class="glass-card glass-card--hover project-card reveal reveal-delay-2" data-video-url="https://www.instagram.com/reel/DTVA2XME7jo/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1758592670606-096a0fc94aed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Effects edit" />
+              <div class="project-overlay">
+                <button class="play-btn" aria-label="Play video">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">After effects</div>
+              <h3 class="project-title">Effects edit</h3>
+              <div class="project-underline"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section--secondary">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">What I Do</span>
+          <h2 class="section-title">Skills &amp; Expertise</h2>
+          <p class="section-desc">Comprehensive creative capabilities for modern visual storytelling</p>
+        </div>
+        <div class="skills-grid">
+          <article class="glass-card glass-card--hover skill-card reveal">
+            <div class="skill-icon">
+              <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>
+            </div>
+            <h3>Video Editing</h3>
+            <p>Precision cuts and seamless transitions</p>
+            <div class="skill-glow"></div>
+          </article>
+          <article class="glass-card glass-card--hover skill-card reveal reveal-delay-1">
+            <div class="skill-icon">
+              <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg>
+            </div>
+            <h3>Motion Design</h3>
+            <p>Fluid animations and dynamic graphics</p>
+            <div class="skill-glow"></div>
+          </article>
+          <article class="glass-card glass-card--hover skill-card reveal reveal-delay-2">
+            <div class="skill-icon">
+              <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+            </div>
+            <h3>Color Grading</h3>
+            <p>Cinematic looks and mood enhancement</p>
+            <div class="skill-glow"></div>
+          </article>
+          <article class="glass-card glass-card--hover skill-card reveal">
+            <div class="skill-icon">
+              <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+            </div>
+            <h3>Cinematography</h3>
+            <p>Visual composition and lighting</p>
+            <div class="skill-glow"></div>
+          </article>
+          <article class="glass-card glass-card--hover skill-card reveal reveal-delay-1">
+            <div class="skill-icon">
+              <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
+            </div>
+            <h3>Sound Design</h3>
+            <p>Immersive audio experiences</p>
+            <div class="skill-glow"></div>
+          </article>
+          <article class="glass-card glass-card--hover skill-card reveal reveal-delay-2">
+            <div class="skill-icon">
+              <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+            </div>
+            <h3>Storytelling</h3>
+            <p>Narrative structure and emotion</p>
+            <div class="skill-glow"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- YouTube -->
+    <section id="youtube" class="section section--dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">YouTube Channel</span>
+          <h2 class="section-title">Longform Content</h2>
+          <p class="section-desc">Stories that sparks different types of emotions</p>
+        </div>
+        <div class="projects-grid youtube-grid">
+          <article class="glass-card glass-card--hover project-card reveal" data-video-url="coming soon">
+            <div class="project-media project-media--video">
+              <img src="https://images.unsplash.com/photo-1671902715190-b3f42d5228e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Cinematic Color Grading Tutorial" />
+              <div class="project-overlay">
+                <button class="play-btn play-btn--red" aria-label="Play video">
+                  <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Cinematic Color Grading Tutorial</h3>
+            </div>
+          </article>
+          <article class="glass-card glass-card--hover project-card reveal reveal-delay-1" data-video-url="coming soon">
+            <div class="project-media project-media--video">
+              <img src="https://images.unsplash.com/photo-1758553026412-bc1da0ebd366?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="My Creative Process Behind the Scenes" />
+              <div class="project-overlay">
+                <button class="play-btn play-btn--red" aria-label="Play video">
+                  <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">My Creative Process Behind the Scenes</h3>
+            </div>
+          </article>
+          <article class="glass-card glass-card--hover project-card reveal reveal-delay-2" data-video-url="coming soon">
+            <div class="project-media project-media--video">
+              <img src="https://images.unsplash.com/photo-1758592670606-096a0fc94aed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Edit Like Apple - Premium Techniques" />
+              <div class="project-overlay">
+                <button class="play-btn play-btn--red" aria-label="Play video">
+                  <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Edit Like Apple - Premium Techniques</h3>
+            </div>
+          </article>
+        </div>
+        <div class="youtube-cta reveal">
+          <a href="https://youtube.com/@pradeepmov" target="_blank" rel="noopener noreferrer" class="btn-youtube">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            Visit My Channel
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--secondary">
+      <div class="container container-narrow">
+        <div class="section-header reveal">
+          <span class="badge">Get in Touch</span>
+          <h2 class="section-title">Let's Collaborate</h2>
+          <p class="section-desc">Let's create something meaningful together</p>
+        </div>
+        <div class="glass-card contact-card reveal">
+          <div class="contact-grid">
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=your.email@example.com&amp;su=Video%20Editing%20Inquiry&amp;body=Hi%20Vi%E1%BB%87t%2C%0A%0ACan%20you%20edit%20my%20video%3F%0A%0A" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">Send Email</div>
+              </div>
+            </a>
+            <a href="https://wa.me/84901234567?text=Hi%20Vi%E1%BB%87t%2C%20can%20you%20edit%20my%20video%3F" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              </div>
+              <div>
+                <div class="contact-label">WhatsApp</div>
+                <div class="contact-value">Contact Me</div>
+              </div>
+            </a>
+          </div>
+          <div class="contact-divider"><span>or connect on social</span></div>
+          <div class="social-grid">
+            <a href="https://instagram.com/prad33ep" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+              <span>Twitter</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+          <div class="availability reveal">
+            <span class="availability-dot"></span>
+            <span>Available for new projects</span>
+          </div>
+        </div>
+        <footer class="footer reveal">
+          <p>© 2026 Nguyễn Trọng Việt. Designed with precision and passion.</p>
+        </footer>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
